@@ -3,19 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Countdown Timer</title>
+    <title>Enhanced Countdown Timer</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <h1>Countdown Timer</h1>
-        <div class="timer">
-            <input type="number" id="minutes" placeholder="Minutes" min="0" max="999">
-            <button id="startBtn">Start</button>
-            <button id="resetBtn">Reset</button>
+        <div class="input-section">
+            <div class="time-input">
+                <input type="number" id="hours" placeholder="Hours" min="0" max="99">
+                <label>Hours</label>
+            </div>
+            <div class="time-input">
+                <input type="number" id="minutes" placeholder="Minutes" min="0" max="59">
+                <label>Minutes</label>
+            </div>
+            <div class="time-input">
+                <input type="number" id="seconds" placeholder="Seconds" min="0" max="59">
+                <label>Seconds</label>
+            </div>
+        </div>
+        <div class="controls">
+            <button id="startBtn" class="btn">Start</button>
+            <button id="pauseBtn" class="btn" disabled>Pause</button>
+            <button id="resetBtn" class="btn" disabled>Reset</button>
         </div>
         <div class="display">
-            <span id="time">00:00</span>
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+            <div class="time-display" id="time">00:00:00</div>
         </div>
     </div>
     <script src="script.js"></script>
