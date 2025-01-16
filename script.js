@@ -52,7 +52,6 @@ function resetTimer() {
 startBtn.addEventListener('click', startTimer);
 resetBtn.addEventListener('click', resetTimer);
 
-// Prevent negative numbers in input
 minutesInput.addEventListener('input', () => {
     if (minutesInput.value < 0) {
         minutesInput.value = 0;
